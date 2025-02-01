@@ -1,1 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citlalli HG - UX Designer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <style>
+        :root {
+            --bg-color: white;
+            --text-color: black;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: black;
+                --text-color: white;
+            }
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            text-align: center;
+            padding: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .case-study {
+            max-width: 90%;
+            text-align: center;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+        @media (min-width: 768px) {
+            .gallery {
+                flex-direction: row;
+                justify-content: center;
+            }
+            .case-study {
+                flex: 1;
+                max-width: 30%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="variable-font">Citlalli HG - UX Designer</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="gallery">
+            <div class="case-study">
+                <img src="images/payments-dashboard.jpg" alt="Screenshot of the Payments Automation Dashboard interface">
+                <h2>Payments Automation Dashboard</h2>
+                <p>Optimized workflow for fintech platforms to streamline transactions.</p>
+            </div>
+            <div class="case-study">
+                <img src="images/atomic-design.jpg" alt="Example of an Atomic Design System interface for a video production app">
+                <h2>UX/UI Atomic Design System</h2>
+                <p>Scalable design system for a video production app to enhance UI consistency.</p>
+            </div>
+            <div class="case-study">
+                <img src="images/ar-installation.jpg" alt="Augmented Reality installation showcasing an interactive user experience">
+                <h2>XR Augmented Reality Installation</h2>
+                <p>Immersive AR experiences integrating storytelling and user interaction.</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Connect with me: 
+            <a href="https://www.linkedin.com/in/citlallihg">LinkedIn</a> | 
+            <a href="mailto:contact@citlallihg.com">Email</a>
+        </p>
+    </footer>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.location.hostname.includes("github.io")) {
+                let links = document.querySelectorAll("nav a");
+                links.forEach(link => {
+                    link.href = "/citlallihg-ux-portfolio/" + link.getAttribute("href");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
 
